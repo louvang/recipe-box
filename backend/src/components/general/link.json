@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_general_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "targetBlank": {
+      "type": "boolean"
+    }
+  }
+}
