@@ -19,16 +19,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const navClass = `border-b-4 w-1/5 px-4 py-3 uppercase tracking-widest font-bold rounded-t-md hover:bg-slate-200 hover:border-slate-700`;
+  const navClass =
+    'border border-b-4 w-1/5 px-4 py-3 uppercase tracking-widest font-bold rounded-t-lg hover:bg-slate-200 hover:border-slate-700';
 
   return (
     <html lang="en">
       <body className={inter.className + ' items-center flex flex-wrap h-lvh'}>
         <div className="container mx-auto max-w-screen-lg">
           <Link href="/">
-            <h1 className="text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight mt-6 mb-4">
+            <div className="text-2xl/7 font-bold text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight mt-6 mb-4">
               Recipe Box
-            </h1>
+            </div>
           </Link>
 
           <div className="box border rounded-lg shadow-md p-4 bg-slate-50 mb-16">
@@ -42,8 +43,8 @@ export default function RootLayout({
               <Link href="/category/dinner" className={navClass}>
                 Dinner
               </Link>
-              <Link href="/category/snacks" className={navClass}>
-                Snacks
+              <Link href="/category" className={navClass}>
+                All Categories
               </Link>
               <Link href="/category/all-tags" className={navClass}>
                 All Tags
