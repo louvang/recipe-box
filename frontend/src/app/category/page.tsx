@@ -24,7 +24,7 @@ export default async function Categories() {
       <ul>
         {categories.map((category: ICategory) => (
           <li key={category.id} className={liClass}>
-            <Link href={`category/${category.slug}`}>{category.title}</Link>
+            <Link href={`category/${category.slug}`} className="block">{category.title}</Link>
           </li>
         ))}
       </ul>
