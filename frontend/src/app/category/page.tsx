@@ -28,6 +28,5 @@ export default async function Categories() {
           </li>
         ))}
       </ul>
-    </div>
-  );
+    </div>  );
 }
