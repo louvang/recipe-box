@@ -10,3 +10,10 @@ npm run develop
 ```
 
 Your backend should now be running at http://localhost:1337/admin
+
+## Running Frontend (Next.js)
+
+```
+cd frontend
+npm run dev
+```
