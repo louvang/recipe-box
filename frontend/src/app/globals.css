@@ -19,3 +19,59 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.menu-btn {
+  @apply uppercase border-[1px] border-neutral-900 pt-1 pb-1 pl-3 pr-3 rounded-full bg-neutral-800 text-neutral-50 text-xs;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.menu-btn:hover {
+  @apply bg-neutral-700 text-neutral-200;
+  transition: ease-in 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.category-li {
+  @apply border-b-[1px] border-neutral-300 px-2.5 flex justify-between items-center gap-1;
+}
+
+.category-li:hover {
+  @apply bg-neutral-200 border-dashed border-b border-neutral-600;
+  transition: ease-out 0.25s;
+}
+
+.li-edit-btn {
+  @apply border-[1px] border-neutral-500 pt-[3px] pb-[3px] pl-2 pr-2 rounded-full uppercase text-xs bg-neutral-100;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.li-edit-btn:hover {
+  @apply border-neutral-900;
+  transition: ease-out 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.li-link {
+  @apply block w-full py-3;
+}
+
+.yellow-msg-box {
+  @apply p-4 border border-neutral-400 rounded-lg bg-yellow-50;
+}
+
+.log-link {
+  @apply border-dashed border-b border-neutral-100;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.log-link:hover {
+  @apply border-dashed border-b border-neutral-900 text-neutral-600;
+  transition: ease-out 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
