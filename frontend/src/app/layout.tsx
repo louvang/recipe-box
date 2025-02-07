@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { Gloock, Syne } from 'next/font/google';
 import Image from 'next/image';
-import Link from 'next/link';
 import './globals.css';
-import { GrLogin, GrLogout } from 'react-icons/gr';
+import SidebarAuthRow from './components/SidebarAuthRow';
 
 const gloock = Gloock({
   weight: '400',
@@ -80,18 +79,7 @@ export default function RootLayout({
             </div>
 
             <div className="bottom-0 absolute w-full border-t border-neutral-300 bg-neutral-100 p-3 flex justify-center">
-              {/* If logged out */}
-              <Link
-                href="/login"
-                className="log-link font-bold flex gap-2 items-center"
-              >
-                <GrLogin /> Login
-              </Link>
-
-              {/* If logged in */}
-              {/* <Link href="/logout" className="log-link flex gap-2 items-center">
-                Logout <GrLogout />
-              </Link> */}
+              <SidebarAuthRow />
             </div>
           </div>
           <div id="content" className="sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-4/5">

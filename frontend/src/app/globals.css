@@ -63,6 +63,10 @@ body {
   @apply p-4 border border-neutral-400 rounded-lg bg-yellow-50;
 }
 
+.red-msg-box {
+  @apply border border-red-600 rounded-lg bg-red-50 text-red-600;
+}
+
 .log-link {
   @apply border-dashed border-b border-neutral-100;
   margin-top: 0px;
@@ -71,6 +75,23 @@ body {
 
 .log-link:hover {
   @apply border-dashed border-b border-neutral-900 text-neutral-600;
+  transition: ease-out 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.input-field {
+  @apply px-3 py-2 rounded-md border-neutral-300 border;
+}
+
+.submit-btn {
+  @apply px-4 py-2 rounded-xl border border-neutral-900 bg-neutral-900 text-neutral-100;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.submit-btn:hover {
+  @apply bg-neutral-800;
   transition: ease-out 0.25s;
   margin-top: 1px;
   margin-bottom: 0px;
