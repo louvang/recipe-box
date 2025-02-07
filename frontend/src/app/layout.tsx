@@ -11,6 +11,7 @@ const gloock = Gloock({
 });
 
 const syne = Syne({
+  weight: '400',
   subsets: ['latin'],
 });
 
@@ -93,7 +94,7 @@ export default function RootLayout({
               </Link> */}
             </div>
           </div>
-          <div id="content" className="p-6 sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-4/5">
+          <div id="content" className="sm:w-1/2 md:w-2/3 lg:w-3/4 xl:w-4/5">
             {children}
           </div>
         </div>
