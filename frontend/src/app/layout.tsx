@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Gloock, Syne } from 'next/font/google';
 import Image from 'next/image';
 import './globals.css';
+import Link from 'next/link';
 import SidebarAuthRow from './components/SidebarAuthRow';
 
 const gloock = Gloock({
@@ -32,19 +33,24 @@ export default function RootLayout({
             id="sidebar"
             className="border-r-[1px] border-neutral-300 bg-neutral-100 sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 h-screen sticky top-0"
           >
-            <div id="logo" className="flex flex-wrap justify-center pt-4 pb-2">
-              <div className="w-full flex justify-center pb-2">
-                <Image src="/logo-icon.png" alt="" width={50} height={50} />
-              </div>
+            <Link href="/">
+              <div
+                id="logo"
+                className="flex flex-wrap justify-center pt-4 pb-2"
+              >
+                <div className="w-full flex justify-center pb-2">
+                  <Image src="/logo-icon.png" alt="" width={50} height={50} />
+                </div>
 
-              <div className={`${gloock.className} antialiased text-6xl`}>
-                Delibox
-              </div>
+                <div className={`${gloock.className} antialiased text-6xl`}>
+                  Delibox
+                </div>
 
-              <div className="pt-1 uppercase tracking-wide font-bold text-xs">
-                Recipe Management
+                <div className="pt-1 uppercase tracking-wide font-bold text-xs">
+                  Recipe Management
+                </div>
               </div>
-            </div>
+            </Link>
 
             <div id="menu" className="flex justify-center gap-2 pt-2 pb-5">
               {/** If logged in */}
