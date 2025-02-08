@@ -3,7 +3,8 @@ import { Gloock, Syne } from 'next/font/google';
 import Image from 'next/image';
 import './globals.css';
 import Link from 'next/link';
-import SidebarAuthRow from './components/SidebarAuthRow';
+import SidebarButtonRow from '@/components/SidebarButtonRow';
+import SidebarAuthRow from '@/components/SidebarAuthRow';
 
 const gloock = Gloock({
   weight: '400',
@@ -52,15 +53,7 @@ export default function RootLayout({
               </div>
             </Link>
 
-            <div id="menu" className="flex justify-center gap-2 pt-2 pb-5">
-              {/** If logged in */}
-              <button type="button" className="menu-btn">
-                Add Recipe
-              </button>
-              <button type="button" className="menu-btn">
-                Add Category
-              </button>
-            </div>
+            <SidebarButtonRow />
 
             <div
               id="categories"
