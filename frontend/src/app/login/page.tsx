@@ -1,9 +1,10 @@
 'use client';
 
-import LoginForm from '@/components/LoginForm';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import LoginForm from '@/components/LoginForm';
+import Loading from '@/components/Loading';
 
 export default function Login() {
   const { isAuthenticated } = useAuth();
@@ -16,7 +17,7 @@ export default function Login() {
   }, [isAuthenticated, router]);
 
   if (isAuthenticated === null) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return <div>{!isAuthenticated && <LoginForm />}</div>;

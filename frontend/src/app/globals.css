@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fafafa;
   --foreground: #171717;
 }
 
@@ -95,4 +95,29 @@ body {
   transition: ease-out 0.25s;
   margin-top: 1px;
   margin-bottom: 0px;
+}
+
+.breadcrumb-row {
+  @apply py-2 px-3 mb-12;
+}
+
+.general-wrapper {
+  @apply flex justify-center mb-24;
+}
+
+.general-content {
+  @apply w-3/4;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-element {
+  animation: spin 2s linear infinite; /* Rotate continuously */
 }
