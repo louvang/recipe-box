@@ -1,10 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { GrLogin, GrLogout } from 'react-icons/gr';
-import useAuth from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 
 export default function SidebarAuthRow() {
-  const isAuthenticated = useAuth();
+  const { isAuthenticated } = useAuth();
 
   const handleLogout = async () => {
     const res = await fetch('api/logout', {

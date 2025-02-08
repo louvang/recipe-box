@@ -5,7 +5,8 @@ export async function GET(req: NextRequest) {
   const token = req.cookies.get('token')?.value;
 
   if (!token) {
-    return NextResponse.json({ authenticated: false }, { status: 401 });
+    // User isn't trying to login
+    return NextResponse.json({ authenticated: false }, { status: 200 });
   }
 
   try {

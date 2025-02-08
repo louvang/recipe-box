@@ -3,10 +3,10 @@
 import LoginForm from '@/components/LoginForm';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import useAuth from '@/hooks/useAuth';
+import { useAuth } from '@/context/AuthContext';
 
 export default function Login() {
-  const isAuthenticated = useAuth();
+  const { isAuthenticated } = useAuth();
   const router = useRouter();
 
   useEffect(() => {
