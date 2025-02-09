@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { AuthProvider } from '@/context/AuthContext';
 import SidebarButtonRow from '@/components/SidebarButtonRow';
 import SidebarAuthRow from '@/components/SidebarAuthRow';
+import SidebarCategories from '@/components/SidebarCategories';
 
 const gloock = Gloock({
   weight: '400',
@@ -62,21 +63,7 @@ export default function RootLayout({
                 className="overflow-auto"
                 style={{ maxHeight: 'calc(100vh - 216px - 51px)' }}
               >
-                {/** If no categories */}
-                <div className="yellow-msg-box mx-4 mb-5">
-                  Sorry, there are no categories yet.
-                </div>
-
-                {/* <ul className="list-none border-t-[1px] border-neutral-300">
-                <li className="category-li">
-                  <Link href="/" className="li-link">
-                    Category 1 (##)
-                  </Link>
-                  <button type="button" className="li-edit-btn">
-                    Edit
-                  </button>
-                </li>
-              </ul> */}
+                <SidebarCategories />
               </div>
 
               <div className="bottom-0 absolute w-full border-t border-neutral-300 bg-neutral-100 p-3 flex justify-center">
