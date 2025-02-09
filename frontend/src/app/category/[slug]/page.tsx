@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { fetchCategoryBySlug } from '@/app/services/fetchCategory';
+import { fetchCategoryBySlug } from '@/services/fetchCategory';
 
 export default async function SingleCategory({
   params,
