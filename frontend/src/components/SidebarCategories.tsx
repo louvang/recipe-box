@@ -37,7 +37,12 @@ export default function SidebarCategories() {
     return (
       <ul className="list-none border-t-[1px] border-neutral-300">
         {categories.map(
-          (category: { id: string; name: string; slug: string }) => (
+          (category: {
+            id: string;
+            name: string;
+            documentId: string;
+            slug: string;
+          }) => (
             <li className="category-li" key={category.id}>
               <Link href={`/category/${category.slug}`} className="li-link">
                 {category.name}
@@ -45,7 +50,7 @@ export default function SidebarCategories() {
 
               {isAuthenticated === true ? (
                 <Link
-                  href={`/category/edit/${category.slug}`}
+                  href={`/category/edit/${category.documentId}`}
                   className="li-edit-btn"
                 >
                   Edit

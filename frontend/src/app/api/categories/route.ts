@@ -57,7 +57,21 @@ export async function GET(request: Request) {
 // Create a new category
 export async function POST(req: NextRequest) {
   const { name, description, slug } = await req.json();
-  // TODO: Check to make sure there are no duplicates
+  // Check to make sure there are no duplicates
+  const checkDuplicate = await fetch(`${API_URL}?filters[slug][$eq]=${slug}`, {
+    headers,
+  });
+
+  const checkData = await checkDuplicate.json();
+
+  if (checkData.data.length > 0) {
+    return NextResponse.json(
+      {
+        error: 'Duplicate category found. Try a different name.',
+      },
+      { status: 400 }
+    );
+  }
 
   // Validate
   if (

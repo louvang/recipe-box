@@ -64,8 +64,12 @@ export default function AddCategoryPage() {
       });
 
       if (!res.ok) {
-        setError('Unable to create category.');
-        throw new Error('Unable to create category.');
+        setError(
+          "Unable to create category. Are you sure that category name doesn't already exists?"
+        );
+        throw new Error(
+          "Unable to create category. Are you sure that category name doesn't already exists?"
+        );
       }
 
       router.push(`/category/${slug}`); // Redirect to new slug

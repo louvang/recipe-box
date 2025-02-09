@@ -97,6 +97,28 @@ body {
   margin-bottom: 0px;
 }
 
+.submit-btn[disabled] {
+  @apply bg-neutral-300 border-neutral-400 text-neutral-400;
+}
+
+.submit-btn[disabled]:hover {
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.delete-btn {
+  @apply px-4 py-2 rounded-xl border border-red-700 bg-red-700 text-neutral-100;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.delete-btn:hover {
+  @apply bg-red-900;
+  transition: ease-out 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
 .breadcrumb-row {
   @apply py-2 px-3 mb-12;
 }
