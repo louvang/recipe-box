@@ -4,31 +4,33 @@ import { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Link from 'next/link';
 import { useAuth } from '@/context/AuthContext';
+import { usePathname } from 'next/navigation';
 
 export default function SidebarCategories() {
+  const pathname = usePathname();
   const { isAuthenticated } = useAuth();
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const res = await fetch('/api/categories');
-        if (!res.ok) {
-          throw new Error('Failed to get categories');
-        }
-        const data = await res.json();
-        setCategories(data.data);
-      } catch (error) {
-        setError('Error fetching categories');
-      } finally {
-        setLoading(false);
+  const fetchCategories = async () => {
+    try {
+      const res = await fetch('/api/categories');
+      if (!res.ok) {
+        throw new Error('Failed to get categories');
       }
-    };
+      const data = await res.json();
+      setCategories(data.data);
+    } catch (error) {
+      setError('Error fetching categories');
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchCategories();
-  }, []);
+  }, [pathname]);
 
   if (loading) return <Loading />;
   if (error) return <p>{error}</p>;
