@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import Loading from './Loading';
 import Link from 'next/link';
+import { useAuth } from '@/context/AuthContext';
 
 export default function SidebarCategories() {
+  const { isAuthenticated } = useAuth();
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -40,12 +42,17 @@ export default function SidebarCategories() {
               <Link href={`/category/${category.slug}`} className="li-link">
                 {category.name}
               </Link>
-              <Link
-                href={`/category/${category.slug}/edit`}
-                className="li-edit-btn"
-              >
-                Edit
-              </Link>
+
+              {isAuthenticated === true ? (
+                <Link
+                  href={`/category/edit/${category.slug}`}
+                  className="li-edit-btn"
+                >
+                  Edit
+                </Link>
+              ) : (
+                ''
+              )}
             </li>
           )
         )}
