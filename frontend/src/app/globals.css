@@ -33,6 +33,45 @@ body {
   margin-bottom: 0px;
 }
 
+.outline-btn {
+  @apply border-[1px] border-neutral-900 pt-1 pb-1 pl-3 pr-3 rounded-full text-neutral-900 text-sm;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.outline-btn:hover {
+  @apply bg-neutral-200 text-neutral-800;
+  transition: ease-in 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.outline-btn-lg {
+  @apply border-[1px] border-neutral-900 pt-1 pb-1 pl-3 pr-3 rounded-lg text-neutral-900 text-sm;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.outline-btn-lg:hover {
+  @apply bg-neutral-200 text-neutral-800;
+  transition: ease-in 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
+.sub-btn {
+  @apply border-[1px] border-neutral-900 pt-1 pb-1 pl-3 pr-3 rounded-full bg-neutral-800 text-neutral-50 text-sm;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+.sub-btn:hover {
+  @apply bg-neutral-700 text-neutral-200;
+  transition: ease-in 0.25s;
+  margin-top: 1px;
+  margin-bottom: 0px;
+}
+
 .category-li {
   @apply border-b-[1px] border-neutral-300 px-2.5 flex justify-between items-center gap-1;
 }
@@ -82,6 +121,10 @@ body {
 
 .input-field {
   @apply px-3 py-2 rounded-md border-neutral-300 border;
+}
+
+.input-field-condensed {
+  @apply px-3 py-1 rounded-md border-neutral-300 border;
 }
 
 .submit-btn {
@@ -142,4 +185,8 @@ body {
 
 .spin-element {
   animation: spin 2s linear infinite; /* Rotate continuously */
+}
+
+.array-inputs {
+  @apply xl:w-1/2 md:w-3/4;
 }
