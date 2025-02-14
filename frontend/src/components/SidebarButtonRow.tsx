@@ -7,7 +7,7 @@ export default function SidebarButtonRow() {
 
   const menuRow = (
     <div>
-      <div id="menu" className="flex justify-center gap-2 pt-2 pb-5">
+      <div id="menu" className="flex justify-center gap-2 pb-5">
         <Link href="/recipe/add" className="menu-btn">
           Add Recipe
         </Link>

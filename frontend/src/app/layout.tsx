@@ -46,11 +46,13 @@ export default function RootLayout({
                     <Image src="/logo-icon.png" alt="" width={50} height={50} />
                   </div>
 
-                  <div className={`${gloock.className} antialiased text-6xl`}>
+                  <div
+                    className={`${gloock.className} antialiased text-6xl w-full text-center`}
+                  >
                     Delibox
                   </div>
 
-                  <div className="pt-1 uppercase tracking-wide font-bold text-xs">
+                  <div className="pt-1 uppercase tracking-wide font-bold text-xs w-full text-center mb-2">
                     Recipe Management
                   </div>
                 </div>
